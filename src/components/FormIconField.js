@@ -8,7 +8,7 @@ const FormField = require('./FormField');
 const Spinner = require('./Spinner');
 
 const ICON_MAP = require('../Octicons').map;
-const ICON_KEYS = require('../Octicons').keys;
+const ICON_KEYS = Object.keys(require('../Octicons'));
 const COLOR_VARIANTS = ['danger', 'default', 'primary', 'success', 'warning'];
 
 export default createReactClass({
@@ -21,12 +21,12 @@ export default createReactClass({
 		iconKey: PropTypes.oneOf(ICON_KEYS).isRequired,
 		iconPosition: PropTypes.oneOf(['left', 'right']),
 	},
-	getDefaultProps () {
+	getDefaultProps() {
 		return {
 			iconPosition: 'left',
 		};
 	},
-	render () {
+	render() {
 		// props
 		var props = blacklist(this.props, 'children', 'iconPosition', 'iconKey', 'iconFill', 'iconColor', 'iconIsLoading');
 
@@ -49,8 +49,8 @@ export default createReactClass({
 		var icon = this.props.iconIsLoading ? (
 			<Spinner size="sm" />
 		) : (
-			<span className={iconClass} />
-		);
+				<span className={iconClass} />
+			);
 
 		return (
 			<FormField {...props}>

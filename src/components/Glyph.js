@@ -4,7 +4,7 @@ const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 
 const icons = require('../Octicons').map;
-const validNames = require('../Octicons').keys;
+const validNames = Object.keys(require('../Octicons'));
 
 const Glyph = createReactClass({
 	displayName: 'Glyph',
@@ -20,7 +20,7 @@ const Glyph = createReactClass({
 			'warning',
 		]),
 	},
-	render () {
+	render() {
 		// classes
 		const className = classNames(
 			'Glyph__icon',
