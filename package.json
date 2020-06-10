@@ -1,5 +1,5 @@
 {
-  "name": "elemental",
+  "name": "elemental0.7.0",
   "version": "0.7.0",
   "description": "React UI Framework",
   "main": "lib/Elemental.js",
@@ -12,7 +12,9 @@
   "dependencies": {
     "blacklist": "^1.1.4",
     "classnames": "^2.2.5",
-    "create-react-class": "^15.6.2"
+    "create-react-class": "^15.6.2",
+    "gulp-git": "^2.10.1",
+    "require-dir": "^0.3.2"
   },
   "devDependencies": {
     "babel": "^5.8.23",
